@@ -1,0 +1,197 @@
+[
+  {
+    "id": "speaker_001",
+    "name": "Juan Guillermo Gómez",
+    "title": "AI/ML Engineer",
+    "company": "Google",
+    "biography": "Especialista en inteligencia artificial y machine learning con experiencia en Google's ADK y Python. Líder en el desarrollo de agentes de IA y arquitecturas inteligentes.",
+    "imageUrl": "@drawable/avatar_placeholder",
+    "socialMedia": {
+      "twitter": "@juan_ai",
+      "linkedin": "juan-guillermo-gomez",
+      "github": "juanguillermogomez"
+    }
+  },
+  {
+    "id": "speaker_002",
+    "name": "Anahi Camas Hernández",
+    "title": "Mission-Driven Developer",
+    "company": "Tech for Good",
+    "biography": "Desarrolladora apasionada por crear tecnología con propósito. Especialista en proyectos que generan impacto social positivo y desarrollo sostenible.",
+    "imageUrl": "@drawable/avatar_placeholder",
+    "socialMedia": {
+      "twitter": "@anahi_mission",
+      "linkedin": "anahi-camas-hernandez",
+      "github": "anahicamas"
+    }
+  },
+  {
+    "id": "speaker_003",
+    "name": "Dinorah Tovar Duarte",
+    "title": "Mobile AI Specialist",
+    "company": "Google",
+    "biography": "Especialista en experiencias móviles con IA, enfocada en Android y tecnologías emergentes. Experta en agentes inteligentes para aplicaciones móviles.",
+    "imageUrl": "@drawable/avatar_placeholder",
+    "socialMedia": {
+      "twitter": "@dinorah_mobile",
+      "linkedin": "dinorah-tovar-duarte",
+      "github": "dinorahtovar"
+    }
+  },
+  {
+    "id": "speaker_004",
+    "name": "Joel Antonio Cruz",
+    "title": "Founder & Developer",
+    "company": "StartupTech",
+    "biography": "Emprendedor tecnológico con experiencia en transformar código en soluciones de impacto real. Fundador de múltiples startups exitosas en el sector tech.",
+    "imageUrl": "@drawable/avatar_placeholder",
+    "socialMedia": {
+      "twitter": "@joel_founder",
+      "linkedin": "joel-antonio-cruz",
+      "github": "joelcruz"
+    }
+  },
+  {
+    "id": "speaker_005",
+    "name": "Aileen Rojas Valencia",
+    "title": "Data Visualization Expert",
+    "company": "Meteorological Institute",
+    "biography": "Especialista en visualización de datos meteorológicos y análisis geoespacial. Experta en mapeo de trayectorias de fenómenos naturales y sistemas de alerta temprana.",
+    "imageUrl": "@drawable/avatar_placeholder",
+    "socialMedia": {
+      "twitter": "@aileen_data",
+      "linkedin": "aileen-rojas-valencia",
+      "github": "aileenrojas"
+    }
+  },
+  {
+    "id": "speaker_006",
+    "name": "Amulya Rattan Bhatia",
+    "title": "Firebase Specialist",
+    "company": "Google",
+    "biography": "Especialista en Firebase y desarrollo backend moderno. Experto en Firebase Studio y arquitecturas serverless para aplicaciones escalables.",
+    "imageUrl": "@drawable/avatar_placeholder",
+    "socialMedia": {
+      "twitter": "@amulya_firebase",
+      "linkedin": "amulya-rattan-bhatia",
+      "github": "amulyabhatia"
+    }
+  },
+  {
+    "id": "speaker_007",
+    "name": "Gema Maria Socorro",
+    "title": "Android Studio Expert",
+    "company": "Google",
+    "biography": "Especialista en Android Studio y herramientas de desarrollo. Experta en integración con Gemini AI y optimización de flujos de trabajo de desarrollo.",
+    "imageUrl": "@drawable/avatar_placeholder",
+    "socialMedia": {
+      "twitter": "@gema_android",
+      "linkedin": "gema-maria-socorro",
+      "github": "gemasocorro"
+    }
+  },
+  {
+    "id": "speaker_008",
+    "name": "Demian Sire",
+    "title": "Web Performance Architect",
+    "company": "WebTech Solutions",
+    "biography": "Arquitecto de software especializado en rendimiento web y patrones arquitectónicos. Experto en Web Workers y aplicaciones de alto rendimiento.",
+    "imageUrl": "@drawable/avatar_placeholder",
+    "socialMedia": {
+      "twitter": "@demian_web",
+      "linkedin": "demian-sire",
+      "github": "demiansire"
+    }
+  },
+  {
+    "id": "speaker_009",
+    "name": "Gustavo Lizarraga",
+    "title": "XR Development Lead",
+    "company": "Immersive Tech",
+    "biography": "Líder en desarrollo de experiencias inmersivas con Android XR. Especialista en realidad aumentada, virtual y mixta para aplicaciones móviles.",
+    "imageUrl": "@drawable/avatar_placeholder",
+    "socialMedia": {
+      "twitter": "@gustavo_xr",
+      "linkedin": "gustavo-lizarraga",
+      "github": "gustavolizarraga"
+    }
+  },
+  {
+    "id": "speaker_010",
+    "name": "Mauricio Arce Torrez",
+    "title": "Frontend Architecture Specialist",
+    "company": "MicroFrontend Solutions",
+    "biography": "Especialista en arquitecturas de micro frontends y Native Federation. Experto en modularización de aplicaciones frontend y patrones de integración.",
+    "imageUrl": "@drawable/avatar_placeholder",
+    "socialMedia": {
+      "twitter": "@mauricio_micro",
+      "linkedin": "mauricio-arce-torrez",
+      "github": "mauricioarce"
+    }
+  },
+  {
+    "id": "speaker_011",
+    "name": "Nikhilesh Tayal",
+    "title": "AI Memory Systems Expert",
+    "company": "AI Research Labs",
+    "biography": "Especialista en sistemas de memoria para agentes de IA y gestión autónoma de datos. Experto en arquitecturas de IA que pueden aprender y adaptarse continuamente.",
+    "imageUrl": "@drawable/avatar_placeholder",
+    "socialMedia": {
+      "twitter": "@nikhilesh_ai",
+      "linkedin": "nikhilesh-tayal",
+      "github": "nikhilestayal"
+    }
+  },
+  {
+    "id": "speaker_012",
+    "name": "Yecely Díaz",
+    "title": "Data-Driven Decision Specialist",
+    "company": "Data Intelligence Co",
+    "biography": "Especialista en toma de decisiones basadas en datos utilizando IA. Experta en integración de Gemini como copiloto para análisis de datos y business intelligence.",
+    "imageUrl": "@drawable/avatar_placeholder",
+    "socialMedia": {
+      "twitter": "@yecely_data",
+      "linkedin": "yecely-diaz",
+      "github": "yecelydiaz"
+    }
+  },
+  {
+    "id": "speaker_013",
+    "name": "Fernanda Ramirez",
+    "title": "AI Security Architect",
+    "company": "SecureAI Solutions",
+    "biography": "Arquitecta de seguridad especializada en protección de aplicaciones de IA generativa. Experta en Model Armor y técnicas de hardening para sistemas de IA.",
+    "imageUrl": "@drawable/avatar_placeholder",
+    "socialMedia": {
+      "twitter": "@fernanda_sec",
+      "linkedin": "fernanda-ramirez",
+      "github": "fernandaramirez"
+    }
+  },
+  {
+    "id": "speaker_014",
+    "name": "Eduardo Roth",
+    "title": "Angular Signals Expert",
+    "company": "Angular Solutions",
+    "biography": "Especialista en Angular Signals y reactividad avanzada. Experto en patrones de programación reactiva y optimización de rendimiento en aplicaciones Angular.",
+    "imageUrl": "@drawable/avatar_placeholder",
+    "socialMedia": {
+      "twitter": "@eduardo_angular",
+      "linkedin": "eduardo-roth",
+      "github": "eduardoroth"
+    }
+  },
+  {
+    "id": "speaker_015",
+    "name": "Mayra Rodriguez",
+    "title": "Firebase Development Lead",
+    "company": "Google",
+    "biography": "Líder en desarrollo con Firebase y metodologías de desarrollo acelerado. Especialista en Firebase Studio y técnicas para aumentar la productividad de desarrollo 10x.",
+    "imageUrl": "@drawable/avatar_placeholder",
+    "socialMedia": {
+      "twitter": "@mayra_firebase",
+      "linkedin": "mayra-rodriguez",
+      "github": "mayrarodriguez"
+    }
+  }
+]

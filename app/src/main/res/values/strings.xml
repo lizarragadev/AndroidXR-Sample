@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">DevFest 2025 Sureste de México</string>
+    <string name="hello_android_xr">Hello Android XR.</string>
+    <string name="switch_to_home_space_mode">Switch to Home Space Mode</string>
+    
+    <!-- DevFest Strings -->
+    <string name="devfest_title">DevFest 2025 Sureste de México</string>
+    <string name="charla_list_title">Charlas del Día</string>
+    <string name="charla_detail_title">Detalle de Charla</string>
+    <string name="expositor_info">Información del Expositor</string>
+    <string name="biografia">Biografía</string>
+    <string name="recursos">Recursos</string>
+    <string name="dia">Día</string>
+    <string name="horario">Horario</string>
+    <string name="sala">Sala</string>
+    <string name="nivel">Nivel</string>
+    <string name="categoria">Categoría</string>
+    <string name="no_charlas">No hay charlas programadas para este día</string>
+    <string name="loading">Cargando...</string>
+    <string name="error_loading">Error al cargar los datos</string>
+</resources>
