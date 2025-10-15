@@ -76,7 +76,6 @@ fun TalkListScreen(
                 .fillMaxSize()
                 .padding(paddingValues)
         ) {
-            // Selector de día
             DiaSelector(
                 diaSeleccionado = selectedDay,
                 onDiaSeleccionado = viewModel::selectDay,

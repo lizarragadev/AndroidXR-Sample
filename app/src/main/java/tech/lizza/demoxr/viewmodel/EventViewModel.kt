@@ -1,7 +1,6 @@
 package tech.lizza.demoxr.viewmodel
 
 import android.app.Application
-import android.util.Log
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -13,15 +12,9 @@ import tech.lizza.demoxr.data.Speaker
 import tech.lizza.demoxr.repository.EventRepository
 
 class EventViewModel(application: Application) : AndroidViewModel(application) {
-    
-    companion object {
-        private const val TAG = "EventViewModel"
-    }
-    
     private val repository = EventRepository(application)
     
     private val _speakers = MutableStateFlow<List<Speaker>>(emptyList())
-    val speakers: StateFlow<List<Speaker>> = _speakers.asStateFlow()
     
     private val _talks = MutableStateFlow<List<Talk>>(emptyList())
     val talks: StateFlow<List<Talk>> = _talks.asStateFlow()
@@ -38,11 +31,9 @@ class EventViewModel(application: Application) : AndroidViewModel(application) {
     private val _selectedTalk = MutableStateFlow<Talk?>(null)
     val selectedTalk: StateFlow<Talk?> = _selectedTalk.asStateFlow()
 
-    // Theme state
     private val _isDarkTheme = MutableStateFlow(false)
     val isDarkTheme: StateFlow<Boolean> = _isDarkTheme.asStateFlow()
     
-    // Dialog states
     private val _showLocationDialog = MutableStateFlow(false)
     val showLocationDialog: StateFlow<Boolean> = _showLocationDialog.asStateFlow()
     
@@ -59,11 +50,8 @@ class EventViewModel(application: Application) : AndroidViewModel(application) {
             _error.value = null
             
             try {
-                val speakersResult = repository.getSpeakers()
-                val talksResult = repository.getTalks()
-                
-                _speakers.value = speakersResult
-                _talks.value = talksResult
+                _speakers.value = repository.getSpeakers()
+                _talks.value = repository.getTalks()
             } catch (e: Exception) {
                 _error.value = "Error loading data: ${e.message}"
             } finally {
@@ -76,21 +64,15 @@ class EventViewModel(application: Application) : AndroidViewModel(application) {
         _selectedDay.value = day
     }
     
-    fun getTalksByDay(day: Int): List<Talk> {
-        return _talks.value.filter { it.day == day }
-    }
+    fun getTalksByDay(day: Int): List<Talk> = _talks.value.filter { it.day == day }
     
-    fun getSpeakerById(id: String): Speaker? {
-        return _speakers.value.find { it.id == id }
-    }
-    
+    fun getSpeakerById(id: String): Speaker? = _speakers.value.find { it.id == id }
     
     fun clearError() {
         _error.value = null
     }
     
     fun selectTalk(talk: Talk?) {
-        Log.d(TAG, "Selecting talk: ${talk?.title ?: "null"}")
         _selectedTalk.value = talk
     }
 

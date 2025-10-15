@@ -9,7 +9,9 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Info
 import androidx.compose.material.icons.filled.LocationOn
@@ -36,12 +38,14 @@ fun TalkDetailContent(
     onBackClick: () -> Unit,
     modifier: Modifier = Modifier
 ) {
+    val scrollState = rememberScrollState()
+    
     Column(
         modifier = modifier
             .fillMaxWidth()
+            .verticalScroll(scrollState)
             .padding(16.dp)
     ) {
-        // Información del expositor
         speaker?.let { speakerInfo ->
             SpeakerInfo(
                 speaker = speakerInfo,
@@ -49,7 +53,6 @@ fun TalkDetailContent(
             )
         }
         
-        // Recursos
         if (talk.resources.isNotEmpty()) {
             Card(
                 modifier = Modifier
@@ -82,7 +85,6 @@ fun TalkDetailContent(
             }
         }
         
-        // Detalles de la charla
         Card(
             modifier = Modifier.fillMaxWidth(),
             elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
@@ -90,7 +92,6 @@ fun TalkDetailContent(
             Column(
                 modifier = Modifier.padding(16.dp)
             ) {
-                // Título
                 Text(
                     text = talk.title,
                     style = MaterialTheme.typography.headlineMedium,
@@ -100,7 +101,6 @@ fun TalkDetailContent(
                 
                 Spacer(modifier = Modifier.height(12.dp))
                 
-                // Descripción
                 Text(
                     text = talk.description,
                     style = MaterialTheme.typography.bodyLarge,
@@ -109,11 +109,9 @@ fun TalkDetailContent(
                 
                 Spacer(modifier = Modifier.height(16.dp))
                 
-                // Información adicional
                 Column(
                     verticalArrangement = Arrangement.spacedBy(8.dp)
                 ) {
-                    // Día
                     Row(
                         verticalAlignment = Alignment.CenterVertically,
                         horizontalArrangement = Arrangement.spacedBy(8.dp)
@@ -131,7 +129,6 @@ fun TalkDetailContent(
                         )
                     }
                     
-                    // Hora
                     Row(
                         verticalAlignment = Alignment.CenterVertically,
                         horizontalArrangement = Arrangement.spacedBy(8.dp)
@@ -149,7 +146,6 @@ fun TalkDetailContent(
                         )
                     }
                     
-                    // Sala
                     Row(
                         verticalAlignment = Alignment.CenterVertically,
                         horizontalArrangement = Arrangement.spacedBy(8.dp)
@@ -167,7 +163,6 @@ fun TalkDetailContent(
                         )
                     }
                     
-                    // Nivel
                     Row(
                         verticalAlignment = Alignment.CenterVertically,
                         horizontalArrangement = Arrangement.spacedBy(8.dp)
@@ -179,9 +174,9 @@ fun TalkDetailContent(
                             modifier = Modifier.size(20.dp)
                         )
                         val levelColor = when (talk.level) {
-                            TalkLevel.BEGINNER -> Color(0xFF4CAF50) // Verde
-                            TalkLevel.INTERMEDIATE -> Color(0xFFFF9800) // Naranja
-                            TalkLevel.ADVANCED -> Color(0xFFF44336) // Rojo
+                            TalkLevel.BEGINNER -> Color(0xFF4CAF50)
+                            TalkLevel.INTERMEDIATE -> Color(0xFFFF9800)
+                            TalkLevel.ADVANCED -> Color(0xFFF44336)
                         }
                         Text(
                             text = when (talk.level) {
@@ -195,7 +190,6 @@ fun TalkDetailContent(
                         )
                     }
                     
-                    // Categoría
                     Row(
                         verticalAlignment = Alignment.CenterVertically,
                         horizontalArrangement = Arrangement.spacedBy(8.dp)

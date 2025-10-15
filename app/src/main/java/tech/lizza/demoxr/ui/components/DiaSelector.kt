@@ -39,7 +39,6 @@ fun DiaSelector(
                 .fillMaxWidth()
                 .padding(16.dp)
         ) {
-            // Título del selector
             Text(
                 text = "Selecciona el día del evento",
                 style = MaterialTheme.typography.titleMedium,
@@ -47,7 +46,6 @@ fun DiaSelector(
                 modifier = Modifier.padding(bottom = 12.dp)
             )
             
-            // Botones de días con información
             SingleChoiceSegmentedButtonRow {
                 (1..3).forEach { dia ->
                     val tipoEvento = when (dia) {
@@ -58,24 +56,23 @@ fun DiaSelector(
                     val isPresencial = dia == 1
                     val isSelected = diaSeleccionado == dia
                     
-                    // Colores personalizados para presencial vs virtual
                     val backgroundColor = when {
-                        isSelected && isPresencial -> androidx.compose.ui.graphics.Color(0xFF2E7D32) // Verde oscuro
-                        isSelected && !isPresencial -> androidx.compose.ui.graphics.Color(0xFF1976D2) // Azul oscuro
-                        !isSelected && isPresencial -> androidx.compose.ui.graphics.Color(0xFFE8F5E8) // Verde claro
-                        else -> androidx.compose.ui.graphics.Color(0xFFE3F2FD) // Azul claro
+                        isSelected && isPresencial -> androidx.compose.ui.graphics.Color(0xFF2E7D32)
+                        isSelected && !isPresencial -> androidx.compose.ui.graphics.Color(0xFF1976D2)
+                        !isSelected && isPresencial -> androidx.compose.ui.graphics.Color(0xFFE8F5E8)
+                        else -> androidx.compose.ui.graphics.Color(0xFFE3F2FD)
                     }
                     
                     val textColor = when {
                         isSelected -> androidx.compose.ui.graphics.Color.White
-                        isPresencial -> androidx.compose.ui.graphics.Color(0xFF1B5E20) // Verde oscuro
-                        else -> androidx.compose.ui.graphics.Color(0xFF0D47A1) // Azul oscuro
+                        isPresencial -> androidx.compose.ui.graphics.Color(0xFF1B5E20)
+                        else -> androidx.compose.ui.graphics.Color(0xFF0D47A1)
                     }
                     
                     val tipoColor = when {
                         isSelected -> androidx.compose.ui.graphics.Color.White
-                        isPresencial -> androidx.compose.ui.graphics.Color(0xFF2E7D32) // Verde
-                        else -> androidx.compose.ui.graphics.Color(0xFF1976D2) // Azul
+                        isPresencial -> androidx.compose.ui.graphics.Color(0xFF2E7D32)
+                        else -> androidx.compose.ui.graphics.Color(0xFF1976D2)
                     }
                     
                     SegmentedButton(
@@ -113,12 +110,10 @@ fun DiaSelector(
                 }
             }
             
-            // Información adicional con colores
             Row(
                 modifier = Modifier.padding(top = 12.dp),
                 horizontalArrangement = Arrangement.spacedBy(8.dp)
             ) {
-                // Indicador presencial
                 Row(
                     verticalAlignment = Alignment.CenterVertically,
                     horizontalArrangement = Arrangement.spacedBy(4.dp)
@@ -145,7 +140,6 @@ fun DiaSelector(
                     color = MaterialTheme.colorScheme.onSurfaceVariant
                 )
                 
-                // Indicador virtual
                 Row(
                     verticalAlignment = Alignment.CenterVertically,
                     horizontalArrangement = Arrangement.spacedBy(4.dp)

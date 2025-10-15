@@ -45,7 +45,6 @@ fun TalkCard(
         Column(
             modifier = Modifier.padding(16.dp)
         ) {
-            // Título de la charla
             Text(
                 text = talk.title,
                 style = MaterialTheme.typography.headlineSmall,
@@ -56,7 +55,6 @@ fun TalkCard(
             
             Spacer(modifier = Modifier.height(8.dp))
             
-            // Información del expositor
             Row(
                 verticalAlignment = Alignment.CenterVertically,
                 horizontalArrangement = Arrangement.spacedBy(8.dp)
@@ -77,7 +75,6 @@ fun TalkCard(
             
             Spacer(modifier = Modifier.height(8.dp))
             
-            // Descripción
             Text(
                 text = talk.description,
                 style = MaterialTheme.typography.bodyMedium,
@@ -88,13 +85,11 @@ fun TalkCard(
             
             Spacer(modifier = Modifier.height(12.dp))
             
-            // Información adicional
             Row(
                 modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.SpaceBetween,
                 verticalAlignment = Alignment.CenterVertically
             ) {
-                // Hora
                 Row(
                     verticalAlignment = Alignment.CenterVertically,
                     horizontalArrangement = Arrangement.spacedBy(4.dp)
@@ -112,7 +107,6 @@ fun TalkCard(
                     )
                 }
                 
-                // Sala
                 Row(
                     verticalAlignment = Alignment.CenterVertically,
                     horizontalArrangement = Arrangement.spacedBy(4.dp)
@@ -133,17 +127,15 @@ fun TalkCard(
             
             Spacer(modifier = Modifier.height(8.dp))
             
-            // Nivel y categoría
             Row(
                 modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.SpaceBetween,
                 verticalAlignment = Alignment.CenterVertically
             ) {
-                // Nivel
                 val levelColor = when (talk.level) {
-                    TalkLevel.BEGINNER -> Color(0xFF4CAF50) // Verde
-                    TalkLevel.INTERMEDIATE -> Color(0xFFFF9800) // Naranja
-                    TalkLevel.ADVANCED -> Color(0xFFF44336) // Rojo
+                    TalkLevel.BEGINNER -> Color(0xFF4CAF50)
+                    TalkLevel.INTERMEDIATE -> Color(0xFFFF9800)
+                    TalkLevel.ADVANCED -> Color(0xFFF44336)
                 }
                 
                 Text(
@@ -157,7 +149,6 @@ fun TalkCard(
                     fontWeight = FontWeight.Bold
                 )
                 
-                // Categoría
                 Text(
                     text = talk.category,
                     style = MaterialTheme.typography.bodySmall,

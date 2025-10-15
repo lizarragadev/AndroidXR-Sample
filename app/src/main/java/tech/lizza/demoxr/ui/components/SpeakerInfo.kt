@@ -46,9 +46,7 @@ fun SpeakerInfo(
             modifier = Modifier.padding(16.dp),
             verticalAlignment = Alignment.CenterVertically
         ) {
-            // Foto del expositor
             if (speaker.imageUrl.startsWith("@drawable/")) {
-                // Usar recurso local
                 val resourceId = LocalContext.current.resources.getIdentifier(
                     speaker.imageUrl.substringAfter("@drawable/"),
                     "drawable",
@@ -66,7 +64,6 @@ fun SpeakerInfo(
                     error = painterResource(id = android.R.drawable.ic_menu_gallery)
                 )
             } else {
-                // Usar URL de internet
                 AsyncImage(
                     model = speaker.imageUrl,
                     contentDescription = "Foto de ${speaker.name}",
@@ -83,7 +80,6 @@ fun SpeakerInfo(
             Column(
                 modifier = Modifier.weight(1f)
             ) {
-                // Nombre del expositor
                 Text(
                     text = speaker.name,
                     style = MaterialTheme.typography.headlineSmall,
@@ -93,7 +89,6 @@ fun SpeakerInfo(
                 
                 Spacer(modifier = Modifier.height(4.dp))
                 
-                // Título del expositor
                 Row(
                     verticalAlignment = Alignment.CenterVertically,
                     horizontalArrangement = Arrangement.spacedBy(8.dp)
@@ -114,7 +109,6 @@ fun SpeakerInfo(
                 
                 Spacer(modifier = Modifier.height(4.dp))
                 
-                // Empresa
                 Row(
                     verticalAlignment = Alignment.CenterVertically,
                     horizontalArrangement = Arrangement.spacedBy(8.dp)
@@ -134,7 +128,6 @@ fun SpeakerInfo(
             }
         }
         
-        // Biografía
         if (speaker.biography.isNotEmpty()) {
             Column(
                 modifier = Modifier

@@ -4,7 +4,7 @@ data class Talk(
     val id: String,
     val title: String,
     val description: String,
-    val day: Int, // 1, 2, or 3
+    val day: Int,
     val startTime: String,
     val endTime: String,
     val room: String,

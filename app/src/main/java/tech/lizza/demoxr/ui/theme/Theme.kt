@@ -19,7 +19,6 @@ private val DarkColorScheme = darkColorScheme(
 )
 
 private val LightColorScheme = lightColorScheme(
-    // Colores principales basados en el poster DevFest
     primary = DevFestBlue,
     onPrimary = Color.White,
     primaryContainer = DevFestBlueLight,
@@ -35,7 +34,6 @@ private val LightColorScheme = lightColorScheme(
     tertiaryContainer = DevFestPinkLight,
     onTertiaryContainer = DevFestOnSurface,
     
-    // Fondos basados en el poster
     background = DevFestBackground,
     onBackground = DevFestOnBackground,
     surface = DevFestSurface,
@@ -43,12 +41,10 @@ private val LightColorScheme = lightColorScheme(
     surfaceVariant = DevFestBackground,
     onSurfaceVariant = DevFestOnSurface,
     
-    // Colores de contenedores
     surfaceContainer = DevFestSurface,
     surfaceContainerHigh = DevFestSurface,
     surfaceContainerHighest = DevFestSurface,
     
-    // Colores de error y outline
     error = Color(0xFFD32F2F),
     onError = Color.White,
     errorContainer = Color(0xFFFFEBEE),
@@ -61,8 +57,7 @@ private val LightColorScheme = lightColorScheme(
 @Composable
 fun DemoXRTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
-    // Dynamic color is available on Android 12+
-    dynamicColor: Boolean = false, // Deshabilitado para usar nuestros colores DevFest
+    dynamicColor: Boolean = false,
     content: @Composable () -> Unit
 ) {
     val colorScheme = when {
