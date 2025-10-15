@@ -1,5 +1,6 @@
 package tech.lizza.demoxr.ui.components
 
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -35,7 +36,8 @@ import tech.lizza.demoxr.data.Speaker
 @Composable
 fun SpeakerInfo(
     speaker: Speaker,
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    onPhotoClick: (() -> Unit)? = null
 ) {
     Card(
         modifier = modifier.fillMaxWidth(),
@@ -61,7 +63,12 @@ fun SpeakerInfo(
                     contentDescription = "Foto de ${speaker.name}",
                     modifier = Modifier
                         .size(80.dp)
-                        .clip(CircleShape),
+                        .clip(CircleShape)
+                        .then(
+                            if (onPhotoClick != null) {
+                                Modifier.clickable { onPhotoClick() }
+                            } else Modifier
+                        ),
                     contentScale = ContentScale.Crop,
                     error = painterResource(id = android.R.drawable.ic_menu_gallery)
                 )
@@ -72,7 +79,12 @@ fun SpeakerInfo(
                     contentDescription = "Foto de ${speaker.name}",
                     modifier = Modifier
                         .size(80.dp)
-                        .clip(CircleShape),
+                        .clip(CircleShape)
+                        .then(
+                            if (onPhotoClick != null) {
+                                Modifier.clickable { onPhotoClick() }
+                            } else Modifier
+                        ),
                     contentScale = ContentScale.Crop,
                     error = painterResource(id = android.R.drawable.ic_menu_gallery)
                 )

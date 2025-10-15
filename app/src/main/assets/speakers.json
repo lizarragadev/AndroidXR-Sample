@@ -5,7 +5,7 @@
     "title": "AI/ML Engineer",
     "company": "Google",
     "biography": "Especialista en inteligencia artificial y machine learning con experiencia en Google's ADK y Python. Líder en el desarrollo de agentes de IA y arquitecturas inteligentes.",
-    "imageUrl": "@drawable/avatar_placeholder",
+    "imageUrl": "@drawable/juan_guillermo",
     "socialMedia": {
       "twitter": "@juan_ai",
       "linkedin": "juan-guillermo-gomez",
@@ -18,7 +18,7 @@
     "title": "Mission-Driven Developer",
     "company": "Tech for Good",
     "biography": "Desarrolladora apasionada por crear tecnología con propósito. Especialista en proyectos que generan impacto social positivo y desarrollo sostenible.",
-    "imageUrl": "@drawable/avatar_placeholder",
+    "imageUrl": "@drawable/anahi_camas",
     "socialMedia": {
       "twitter": "@anahi_mission",
       "linkedin": "anahi-camas-hernandez",
@@ -31,7 +31,7 @@
     "title": "Mobile AI Specialist",
     "company": "Google",
     "biography": "Especialista en experiencias móviles con IA, enfocada en Android y tecnologías emergentes. Experta en agentes inteligentes para aplicaciones móviles.",
-    "imageUrl": "@drawable/avatar_placeholder",
+    "imageUrl": "@drawable/dinorah_tovar",
     "socialMedia": {
       "twitter": "@dinorah_mobile",
       "linkedin": "dinorah-tovar-duarte",
@@ -44,7 +44,7 @@
     "title": "Founder & Developer",
     "company": "StartupTech",
     "biography": "Emprendedor tecnológico con experiencia en transformar código en soluciones de impacto real. Fundador de múltiples startups exitosas en el sector tech.",
-    "imageUrl": "@drawable/avatar_placeholder",
+    "imageUrl": "@drawable/joel_antonio_cruz",
     "socialMedia": {
       "twitter": "@joel_founder",
       "linkedin": "joel-antonio-cruz",
@@ -57,7 +57,7 @@
     "title": "Data Visualization Expert",
     "company": "Meteorological Institute",
     "biography": "Especialista en visualización de datos meteorológicos y análisis geoespacial. Experta en mapeo de trayectorias de fenómenos naturales y sistemas de alerta temprana.",
-    "imageUrl": "@drawable/avatar_placeholder",
+    "imageUrl": "@drawable/aileen_rojas",
     "socialMedia": {
       "twitter": "@aileen_data",
       "linkedin": "aileen-rojas-valencia",
@@ -70,7 +70,7 @@
     "title": "Firebase Specialist",
     "company": "Google",
     "biography": "Especialista en Firebase y desarrollo backend moderno. Experto en Firebase Studio y arquitecturas serverless para aplicaciones escalables.",
-    "imageUrl": "@drawable/avatar_placeholder",
+    "imageUrl": "@drawable/amulya_rattan",
     "socialMedia": {
       "twitter": "@amulya_firebase",
       "linkedin": "amulya-rattan-bhatia",
@@ -83,7 +83,7 @@
     "title": "Android Studio Expert",
     "company": "Google",
     "biography": "Especialista en Android Studio y herramientas de desarrollo. Experta en integración con Gemini AI y optimización de flujos de trabajo de desarrollo.",
-    "imageUrl": "@drawable/avatar_placeholder",
+    "imageUrl": "@drawable/gema_socorro",
     "socialMedia": {
       "twitter": "@gema_android",
       "linkedin": "gema-maria-socorro",
@@ -96,7 +96,7 @@
     "title": "Web Performance Architect",
     "company": "WebTech Solutions",
     "biography": "Arquitecto de software especializado en rendimiento web y patrones arquitectónicos. Experto en Web Workers y aplicaciones de alto rendimiento.",
-    "imageUrl": "@drawable/avatar_placeholder",
+    "imageUrl": "@drawable/damian_sire",
     "socialMedia": {
       "twitter": "@demian_web",
       "linkedin": "demian-sire",
@@ -109,7 +109,7 @@
     "title": "XR Development Lead",
     "company": "Immersive Tech",
     "biography": "Líder en desarrollo de experiencias inmersivas con Android XR. Especialista en realidad aumentada, virtual y mixta para aplicaciones móviles.",
-    "imageUrl": "@drawable/avatar_placeholder",
+    "imageUrl": "@drawable/gustavo_lizarraga",
     "socialMedia": {
       "twitter": "@gustavo_xr",
       "linkedin": "gustavo-lizarraga",
@@ -122,7 +122,7 @@
     "title": "Frontend Architecture Specialist",
     "company": "MicroFrontend Solutions",
     "biography": "Especialista en arquitecturas de micro frontends y Native Federation. Experto en modularización de aplicaciones frontend y patrones de integración.",
-    "imageUrl": "@drawable/avatar_placeholder",
+    "imageUrl": "@drawable/mauricio_arce",
     "socialMedia": {
       "twitter": "@mauricio_micro",
       "linkedin": "mauricio-arce-torrez",
@@ -135,7 +135,7 @@
     "title": "AI Memory Systems Expert",
     "company": "AI Research Labs",
     "biography": "Especialista en sistemas de memoria para agentes de IA y gestión autónoma de datos. Experto en arquitecturas de IA que pueden aprender y adaptarse continuamente.",
-    "imageUrl": "@drawable/avatar_placeholder",
+    "imageUrl": "@drawable/nikhilesh_tayal",
     "socialMedia": {
       "twitter": "@nikhilesh_ai",
       "linkedin": "nikhilesh-tayal",
@@ -148,7 +148,7 @@
     "title": "Data-Driven Decision Specialist",
     "company": "Data Intelligence Co",
     "biography": "Especialista en toma de decisiones basadas en datos utilizando IA. Experta en integración de Gemini como copiloto para análisis de datos y business intelligence.",
-    "imageUrl": "@drawable/avatar_placeholder",
+    "imageUrl": "@drawable/yecely_diaz",
     "socialMedia": {
       "twitter": "@yecely_data",
       "linkedin": "yecely-diaz",
@@ -161,7 +161,7 @@
     "title": "AI Security Architect",
     "company": "SecureAI Solutions",
     "biography": "Arquitecta de seguridad especializada en protección de aplicaciones de IA generativa. Experta en Model Armor y técnicas de hardening para sistemas de IA.",
-    "imageUrl": "@drawable/avatar_placeholder",
+    "imageUrl": "@drawable/fernanda_ochoa",
     "socialMedia": {
       "twitter": "@fernanda_sec",
       "linkedin": "fernanda-ramirez",
@@ -174,7 +174,7 @@
     "title": "Angular Signals Expert",
     "company": "Angular Solutions",
     "biography": "Especialista en Angular Signals y reactividad avanzada. Experto en patrones de programación reactiva y optimización de rendimiento en aplicaciones Angular.",
-    "imageUrl": "@drawable/avatar_placeholder",
+    "imageUrl": "@drawable/eduardo_roth",
     "socialMedia": {
       "twitter": "@eduardo_angular",
       "linkedin": "eduardo-roth",
@@ -187,7 +187,7 @@
     "title": "Firebase Development Lead",
     "company": "Google",
     "biography": "Líder en desarrollo con Firebase y metodologías de desarrollo acelerado. Especialista en Firebase Studio y técnicas para aumentar la productividad de desarrollo 10x.",
-    "imageUrl": "@drawable/avatar_placeholder",
+    "imageUrl": "@drawable/mayra_rodriguez",
     "socialMedia": {
       "twitter": "@mayra_firebase",
       "linkedin": "mayra-rodriguez",

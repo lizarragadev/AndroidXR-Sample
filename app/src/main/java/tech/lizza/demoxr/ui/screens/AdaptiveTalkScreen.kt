@@ -58,6 +58,8 @@ import tech.lizza.demoxr.ui.components.TalkDetailContent
 import tech.lizza.demoxr.ui.components.DiaSelector
 import tech.lizza.demoxr.ui.components.EmptyDetailState
 import tech.lizza.demoxr.viewmodel.EventViewModel
+import tech.lizza.demoxr.xr.FloatingSpeakerOrbiter
+import tech.lizza.demoxr.xr.FloatingTalkOrbiter
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -94,8 +96,8 @@ fun AdaptiveTalkScreen(
         }
     }
 
-    Box(modifier = modifier.fillMaxSize()) {
-        Scaffold(
+           Box(modifier = modifier.fillMaxSize()) {
+               Scaffold(
             modifier = Modifier.fillMaxSize(),
             topBar = {
                 TopAppBar(
@@ -129,6 +131,17 @@ fun AdaptiveTalkScreen(
                                     id = if (isDarkTheme) R.drawable.ic_sun else R.drawable.ic_moon
                                 ),
                                 contentDescription = if (isDarkTheme) "Cambiar a tema claro" else "Cambiar a tema oscuro"
+                            )
+                        }
+                        
+                        // Botón de ARCore Real
+                        IconButton(onClick = { 
+                            val intent = Intent(context, tech.lizza.demoxr.ar.ModernARMapActivity::class.java)
+                            context.startActivity(intent)
+                        }) {
+                            Icon(
+                                painter = painterResource(id = R.drawable.ic_ar_map),
+                                contentDescription = "ARCore Real - Mapa 3D"
                             )
                         }
                     },
@@ -423,6 +436,33 @@ fun AdaptiveTalkScreen(
                     }
                 }
             }
+        }
+        
+        // Orbiters flotantes - Pueden moverse libremente
+        selectedTalk?.let { talk ->
+            val speaker = viewModel.getSpeakerById(talk.speakerId)
+            
+            // Orbiter flotante del speaker
+            FloatingSpeakerOrbiter(
+                speaker = speaker,
+                isVisible = true,
+                onClose = { 
+                    // Cerrar el orbiter deseleccionando la charla
+                    onTalkSelected(null)
+                }
+            )
+            
+            // Orbiter flotante de la charla
+            FloatingTalkOrbiter(
+                talkTitle = talk.title,
+                time = "${talk.startTime} - ${talk.endTime}",
+                room = talk.room,
+                isVisible = true,
+                onClose = { 
+                    // Cerrar el orbiter deseleccionando la charla
+                    onTalkSelected(null)
+                }
+            )
         }
     }
 }

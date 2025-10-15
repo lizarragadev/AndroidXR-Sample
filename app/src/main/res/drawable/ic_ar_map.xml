@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    
+    <!-- Fondo del mapa -->
+    <path
+        android:fillColor="#4CAF50"
+        android:pathData="M3,3h18v18H3z" />
+    
+    <!-- Líneas del mapa -->
+    <path
+        android:fillColor="#2E7D32"
+        android:pathData="M6,6h12v2H6z" />
+    <path
+        android:fillColor="#2E7D32"
+        android:pathData="M6,10h8v2H6z" />
+    <path
+        android:fillColor="#2E7D32"
+        android:pathData="M6,14h10v2H6z" />
+    
+    <!-- Puntos de interés -->
+    <path
+        android:fillColor="#FF5722"
+        android:pathData="M9,6 A1,1 0 1,1 9,8 A1,1 0 1,1 9,6 Z" />
+    <path
+        android:fillColor="#2196F3"
+        android:pathData="M15,6 A1,1 0 1,1 15,8 A1,1 0 1,1 15,6 Z" />
+    <path
+        android:fillColor="#FFC107"
+        android:pathData="M12,14 A1,1 0 1,1 12,16 A1,1 0 1,1 12,14 Z" />
+    
+    <!-- Indicador AR (cubo 3D) -->
+    <path
+        android:fillColor="#9C27B0"
+        android:pathData="M18,2h2v2h-2z" />
+    <path
+        android:fillColor="#7B1FA2"
+        android:pathData="M20,2v2h2v-2z" />
+    <path
+        android:fillColor="#7B1FA2"
+        android:pathData="M18,4h2v2h-2z" />
+</vector>

@@ -102,8 +102,8 @@ fun TalkCard(
                     Icon(
                         imageVector = Icons.Default.Info,
                         contentDescription = "Hora",
-                        tint = MaterialTheme.colorScheme.onSurfaceVariant,
-                        modifier = Modifier.size(16.dp)
+                        tint = MaterialTheme.colorScheme.primary,
+                        modifier = Modifier.size(14.dp)
                     )
                     Text(
                         text = "${talk.startTime} - ${talk.endTime}",
@@ -120,8 +120,8 @@ fun TalkCard(
                     Icon(
                         imageVector = Icons.Default.LocationOn,
                         contentDescription = "Sala",
-                        tint = MaterialTheme.colorScheme.onSurfaceVariant,
-                        modifier = Modifier.size(16.dp)
+                        tint = MaterialTheme.colorScheme.primary,
+                        modifier = Modifier.size(14.dp)
                     )
                     Text(
                         text = talk.room,
@@ -145,7 +145,6 @@ fun TalkCard(
                     TalkLevel.INTERMEDIATE -> Color(0xFFFF9800) // Naranja
                     TalkLevel.ADVANCED -> Color(0xFFF44336) // Rojo
                 }
-                
                 Text(
                     text = when (talk.level) {
                         TalkLevel.BEGINNER -> "PRINCIPIANTE"

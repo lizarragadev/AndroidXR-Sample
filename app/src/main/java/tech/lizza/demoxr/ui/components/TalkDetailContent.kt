@@ -1,15 +1,23 @@
 package tech.lizza.demoxr.ui.components
 
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.verticalScroll
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.setValue
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Info
 import androidx.compose.material.icons.filled.LocationOn
@@ -36,18 +44,23 @@ fun TalkDetailContent(
     onBackClick: () -> Unit,
     modifier: Modifier = Modifier
 ) {
-    Column(
-        modifier = modifier
-            .fillMaxWidth()
-            .padding(16.dp)
-    ) {
-        // Información del expositor
-        speaker?.let { speakerInfo ->
-            SpeakerInfo(
-                speaker = speakerInfo,
-                modifier = Modifier.padding(bottom = 16.dp)
-            )
-        }
+    var showSpeakerPanel by remember { mutableStateOf(false) }
+    
+    Box(modifier = modifier.fillMaxSize()) {
+        Column(
+            modifier = Modifier
+                .fillMaxWidth()
+                .verticalScroll(rememberScrollState())
+                .padding(16.dp)
+        ) {
+            // Información del expositor
+            speaker?.let { speakerInfo ->
+                SpeakerInfo(
+                    speaker = speakerInfo,
+                    modifier = Modifier.padding(bottom = 16.dp),
+                    onPhotoClick = { showSpeakerPanel = true }
+                )
+            }
         
         // Recursos
         if (talk.resources.isNotEmpty()) {
@@ -215,6 +228,16 @@ fun TalkDetailContent(
                     }
                 }
             }
+        }
+        }
+        
+        // Panel flotante con la foto ampliada del speaker
+        if (showSpeakerPanel && speaker != null) {
+            tech.lizza.demoxr.xr.SpeakerPhotoPanel(
+                speaker = speaker,
+                onClose = { showSpeakerPanel = false },
+                modifier = Modifier.align(Alignment.Center)
+            )
         }
     }
 }
