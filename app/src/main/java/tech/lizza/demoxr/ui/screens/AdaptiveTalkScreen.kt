@@ -55,7 +55,10 @@ import tech.lizza.demoxr.R
 import tech.lizza.demoxr.data.Talk
 import tech.lizza.demoxr.ui.components.TalkCard
 import tech.lizza.demoxr.ui.components.TalkDetailContent
-import tech.lizza.demoxr.ui.components.DiaSelector
+import tech.lizza.demoxr.ui.components.TabSelector
+import tech.lizza.demoxr.ui.components.TabType
+import tech.lizza.demoxr.ui.components.ExpositorCard
+import tech.lizza.demoxr.ui.components.SponsorCard
 import tech.lizza.demoxr.ui.components.EmptyDetailState
 import tech.lizza.demoxr.viewmodel.EventViewModel
 
@@ -69,7 +72,9 @@ fun AdaptiveTalkScreen(
 ) {
     val context = LocalContext.current
     val talks by viewModel.talks.collectAsState()
-    val selectedDay by viewModel.selectedDay.collectAsState()
+    val speakers by viewModel.speakers.collectAsState()
+    val sponsors by viewModel.sponsors.collectAsState()
+    val selectedTab by viewModel.selectedTab.collectAsState()
     val isLoading by viewModel.isLoading.collectAsState()
     val error by viewModel.error.collectAsState()
     val isDarkTheme by viewModel.isDarkTheme.collectAsState()
@@ -101,7 +106,7 @@ fun AdaptiveTalkScreen(
                 TopAppBar(
                     title = {
                         Text(
-                            text = "DevFest 2025 Sureste de México",
+                            text = "DevFest El Alto 2025",
                             fontWeight = FontWeight.Bold
                         )
                     },
@@ -119,6 +124,17 @@ fun AdaptiveTalkScreen(
                             Icon(
                                 painter = painterResource(id = R.drawable.ic_live),
                                 contentDescription = "Información de eventos virtuales"
+                            )
+                        }
+                        
+                        // Botón de ARCore Real
+                        IconButton(onClick = { 
+                            val intent = Intent(context, tech.lizza.demoxr.ar.ModernARMapActivity::class.java)
+                            context.startActivity(intent)
+                        }) {
+                            Icon(
+                                painter = painterResource(id = R.drawable.ic_ar_map),
+                                contentDescription = "ARCore Real - Mapa 3D"
                             )
                         }
                         
@@ -144,7 +160,9 @@ fun AdaptiveTalkScreen(
                 // Layout de dos paneles para pantallas grandes
                 TwoPaneLayout(
                     talks = talks,
-                    selectedDay = selectedDay,
+                    speakers = speakers,
+                    sponsors = sponsors,
+                    selectedTab = selectedTab,
                     isLoading = isLoading,
                     error = error,
                     onTalkSelected = onTalkSelected,
@@ -156,7 +174,9 @@ fun AdaptiveTalkScreen(
                 // Layout de un solo panel para pantallas pequeñas
                 SinglePaneLayout(
                     talks = talks,
-                    selectedDay = selectedDay,
+                    speakers = speakers,
+                    sponsors = sponsors,
+                    selectedTab = selectedTab,
                     isLoading = isLoading,
                     error = error,
                     onTalkSelected = onTalkSelected,
@@ -199,33 +219,33 @@ fun AdaptiveTalkScreen(
                         
                         // Contenido
                         Text(
-                            text = "Día 1 - DevFest 2025 Sureste de México",
+                            text = "DevFest El Alto 2025",
                             style = MaterialTheme.typography.titleMedium,
                             fontWeight = FontWeight.Bold,
                             modifier = Modifier.padding(bottom = 8.dp)
                         )
                         Text(
-                            text = "🏢 Universidad Tecnológica de Tabasco",
+                            text = "🏢 Infocal El Alto",
                             style = MaterialTheme.typography.bodyLarge,
                             modifier = Modifier.padding(bottom = 4.dp)
                         )
                         Text(
-                            text = "📍 Carretera Villahermosa - Teapa Km. 14.5",
+                            text = "📍 Av. 6 de Marzo entre Calle 2 y 3",
                             style = MaterialTheme.typography.bodyMedium,
                             modifier = Modifier.padding(bottom = 4.dp)
                         )
                         Text(
-                            text = "🏙️ Villahermosa, Tabasco, México",
+                            text = "🏙️ El Alto, Bolivia",
                             style = MaterialTheme.typography.bodyMedium,
                             modifier = Modifier.padding(bottom = 8.dp)
                         )
                         Text(
-                            text = "⏰ Horario: 12:00 PM - 4:00 PM",
+                            text = "⏰ Horario: 1:00 PM - 9:00 PM",
                             style = MaterialTheme.typography.bodyMedium,
                             modifier = Modifier.padding(bottom = 4.dp)
                         )
                         Text(
-                            text = "📅 Fecha: 15 de Noviembre, 2024",
+                            text = "📅 Fecha: Sábado 22 de Noviembre, 2025",
                             style = MaterialTheme.typography.bodyMedium,
                             modifier = Modifier.padding(bottom = 16.dp)
                         )
@@ -253,19 +273,19 @@ fun AdaptiveTalkScreen(
                                     modifier = Modifier.padding(bottom = 8.dp)
                                 )
                                 Text(
-                                    text = "https://maps.app.goo.gl/RnS2jz3FdvSVbn1G9",
+                                    text = "https://www.google.com/maps?ll=-16.507074,-68.16402&z=15&t=m&hl=es-419&gl=US&mapclient=embed&cid=2176606719245611935",
                                     style = MaterialTheme.typography.bodySmall,
                                     color = MaterialTheme.colorScheme.primary,
                                     textDecoration = TextDecoration.Underline,
                                     modifier = Modifier
                                         .padding(bottom = 8.dp)
                                         .clickable {
-                                            val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://maps.app.goo.gl/RnS2jz3FdvSVbn1G9"))
+                                            val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.google.com/maps?ll=-16.507074,-68.16402&z=15&t=m&hl=es-419&gl=US&mapclient=embed&cid=2176606719245611935"))
                                             context.startActivity(intent)
                                         }
                                 )
                                 Text(
-                                    text = "📍 Coordenadas: 17.9875° N, 92.9250° O",
+                                    text = "📍 Coordenadas: -16.507074, -68.16402",
                                     style = MaterialTheme.typography.bodySmall,
                                     color = MaterialTheme.colorScheme.onSurfaceVariant
                                 )
@@ -325,84 +345,38 @@ fun AdaptiveTalkScreen(
                         
                         // Contenido
                         Text(
-                            text = "Días 2 y 3 - DevFest 2025 Sureste de México Virtual",
+                            text = "DevFest El Alto 2025",
                             style = MaterialTheme.typography.titleMedium,
                             fontWeight = FontWeight.Bold,
                             modifier = Modifier.padding(bottom = 8.dp)
                         )
                         Text(
-                            text = "🌐 Plataforma: Google Meet",
+                            text = "📅 Fecha: Sábado 22 de Noviembre, 2025",
                             style = MaterialTheme.typography.bodyLarge,
-                            modifier = Modifier.padding(bottom = 8.dp)
-                        )
-                        Text(
-                            text = "📅 Día 2: 16 de Noviembre, 2024",
-                            style = MaterialTheme.typography.bodyMedium,
                             modifier = Modifier.padding(bottom = 4.dp)
                         )
                         Text(
-                            text = "⏰ Horario: 11:00 AM - 3:00 PM",
+                            text = "⏰ Horario: 1:00 PM - 9:00 PM",
                             style = MaterialTheme.typography.bodyMedium,
                             modifier = Modifier.padding(bottom = 8.dp)
                         )
                         Text(
-                            text = "📅 Día 3: 17 de Noviembre, 2024",
-                            style = MaterialTheme.typography.bodyMedium,
-                            modifier = Modifier.padding(bottom = 4.dp)
-                        )
-                        Text(
-                            text = "⏰ Horario: 11:00 AM - 4:00 PM",
+                            text = "🎟️ Inscripción Libre",
                             style = MaterialTheme.typography.bodyMedium,
                             modifier = Modifier.padding(bottom = 8.dp)
                         )
                         Text(
-                            text = "🔗 Enlaces de acceso se enviarán por email",
+                            text = "🔗 https://gdg.community.dev/events/details/google-gdg-el-alto-presents-devfest-el-alto-2025/",
                             style = MaterialTheme.typography.bodySmall,
                             color = MaterialTheme.colorScheme.primary,
-                            modifier = Modifier.padding(bottom = 16.dp)
+                            textDecoration = TextDecoration.Underline,
+                            modifier = Modifier
+                                .padding(bottom = 16.dp)
+                                .clickable {
+                                    val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://gdg.community.dev/events/details/google-gdg-el-alto-presents-devfest-el-alto-2025/"))
+                                    context.startActivity(intent)
+                                }
                         )
-                        
-                        // Video de YouTube embebido
-                        Card(
-                            modifier = Modifier.fillMaxWidth(),
-                            elevation = CardDefaults.cardElevation(defaultElevation = 4.dp),
-                            colors = CardDefaults.cardColors(
-                                containerColor = MaterialTheme.colorScheme.secondaryContainer
-                            )
-                        ) {
-                            Column(
-                                modifier = Modifier.padding(16.dp)
-                            ) {
-                                Text(
-                                    text = "📺 Transmisión en Vivo - YouTube",
-                                    style = MaterialTheme.typography.titleSmall,
-                                    fontWeight = FontWeight.Bold,
-                                    modifier = Modifier.padding(bottom = 8.dp)
-                                )
-                                Text(
-                                    text = "Sigue la transmisión en vivo en nuestro canal de YouTube:",
-                                    style = MaterialTheme.typography.bodySmall,
-                                    modifier = Modifier.padding(bottom = 8.dp)
-                                )
-                                Text(
-                                    text = "https://www.youtube.com/@gdgvillahermosa/streams",
-                                    style = MaterialTheme.typography.bodySmall,
-                                    color = MaterialTheme.colorScheme.primary,
-                                    textDecoration = TextDecoration.Underline,
-                                    modifier = Modifier
-                                        .padding(bottom = 8.dp)
-                                        .clickable {
-                                            val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.youtube.com/@gdgvillahermosa/streams"))
-                                            context.startActivity(intent)
-                                        }
-                                )
-                                Text(
-                                    text = "🎥 Canal: GDG Villahermosa",
-                                    style = MaterialTheme.typography.bodySmall,
-                                    color = MaterialTheme.colorScheme.onSurfaceVariant
-                                )
-                            }
-                        }
                         
                         Spacer(modifier = Modifier.height(16.dp))
                         
@@ -431,7 +405,9 @@ fun AdaptiveTalkScreen(
 @OptIn(ExperimentalMaterial3Api::class)
 private fun TwoPaneLayout(
     talks: List<Talk>,
-    selectedDay: Int,
+    speakers: List<tech.lizza.demoxr.data.Speaker>,
+    sponsors: List<tech.lizza.demoxr.data.Sponsor>,
+    selectedTab: TabType,
     isLoading: Boolean,
     error: String?,
     onTalkSelected: (Talk?) -> Unit,
@@ -450,9 +426,9 @@ private fun TwoPaneLayout(
                 .fillMaxWidth()
                 .padding(end = 8.dp)
         ) {
-            DiaSelector(
-                diaSeleccionado = selectedDay,
-                onDiaSeleccionado = viewModel::selectDay,
+            TabSelector(
+                selectedTab = selectedTab,
+                onTabSelected = viewModel::selectTab,
                 modifier = Modifier.padding(bottom = 8.dp)
             )
             if (isLoading) {
@@ -463,31 +439,26 @@ private fun TwoPaneLayout(
                     CircularProgressIndicator()
                 }
             } else {
-                val talksDelDia = viewModel.getTalksByDay(selectedDay)
-                if (talksDelDia.isEmpty()) {
-                    Box(
-                        modifier = Modifier.fillMaxSize(),
-                        contentAlignment = Alignment.Center
-                    ) {
-                        Text(
-                            text = "No hay charlas programadas para el Día $selectedDay",
-                            style = MaterialTheme.typography.titleMedium,
-                            color = MaterialTheme.colorScheme.onSurfaceVariant
-                        )
-                    }
-                } else {
-                    LazyColumn(
-                        modifier = Modifier.fillMaxWidth(),
-                        verticalArrangement = Arrangement.spacedBy(8.dp),
-                        contentPadding = PaddingValues(horizontal = 8.dp)
-                    ) {
-                        items(talksDelDia) { talk ->
-                            val speaker = viewModel.getSpeakerById(talk.speakerId)
-                            TalkCard(
-                                talk = talk,
-                                speakerName = speaker?.name ?: "Speaker not found",
-                                onClick = { onTalkSelected(talk) }
-                            )
+                LazyColumn(
+                    modifier = Modifier.fillMaxWidth(),
+                    verticalArrangement = Arrangement.spacedBy(8.dp),
+                    contentPadding = PaddingValues(horizontal = 8.dp)
+                ) {
+                    when (selectedTab) {
+                        TabType.EXPOSITORES -> {
+                            items(speakers) { speaker ->
+                                val talk = viewModel.getTalksBySpeaker(speaker.id)
+                                ExpositorCard(
+                                    speaker = speaker,
+                                    talk = talk,
+                                    onClick = { talk?.let { onTalkSelected(it) } }
+                                )
+                            }
+                        }
+                        TabType.SPONSORS -> {
+                            items(sponsors) { sponsor ->
+                                SponsorCard(sponsor = sponsor)
+                            }
                         }
                     }
                 }
@@ -503,7 +474,7 @@ private fun TwoPaneLayout(
                 TalkDetailContent(
                     talk = selectedTalk,
                     speaker = speaker,
-                    onBackClick = { onTalkSelected(null) } // En pantallas grandes, solo deseleccionar
+                    onBackClick = { onTalkSelected(null) }
                 )
             } else {
                 EmptyDetailState()
@@ -516,7 +487,9 @@ private fun TwoPaneLayout(
 @OptIn(ExperimentalMaterial3Api::class)
 private fun SinglePaneLayout(
     talks: List<Talk>,
-    selectedDay: Int,
+    speakers: List<tech.lizza.demoxr.data.Speaker>,
+    sponsors: List<tech.lizza.demoxr.data.Sponsor>,
+    selectedTab: TabType,
     isLoading: Boolean,
     error: String?,
     onTalkSelected: (Talk?) -> Unit,
@@ -528,9 +501,9 @@ private fun SinglePaneLayout(
             .fillMaxSize()
             .padding(paddingValues)
     ) {
-        DiaSelector(
-            diaSeleccionado = selectedDay,
-            onDiaSeleccionado = viewModel::selectDay,
+        TabSelector(
+            selectedTab = selectedTab,
+            onTabSelected = viewModel::selectTab,
             modifier = Modifier.padding(bottom = 8.dp)
         )
 
@@ -542,32 +515,26 @@ private fun SinglePaneLayout(
                 CircularProgressIndicator()
             }
         } else {
-            val talksDelDia = viewModel.getTalksByDay(selectedDay)
-
-            if (talksDelDia.isEmpty()) {
-                Box(
-                    modifier = Modifier.fillMaxSize(),
-                    contentAlignment = Alignment.Center
-                ) {
-                    Text(
-                        text = "No hay charlas programadas para el Día $selectedDay",
-                        style = MaterialTheme.typography.titleMedium,
-                        color = MaterialTheme.colorScheme.onSurfaceVariant
-                    )
-                }
-            } else {
-                LazyColumn(
-                    modifier = Modifier.fillMaxWidth(),
-                    verticalArrangement = Arrangement.spacedBy(8.dp),
-                    contentPadding = PaddingValues(horizontal = 8.dp)
-                ) {
-                    items(talksDelDia) { talk ->
-                        val speaker = viewModel.getSpeakerById(talk.speakerId)
-                        TalkCard(
-                            talk = talk,
-                            speakerName = speaker?.name ?: "Speaker not found",
-                            onClick = { onTalkSelected(talk) }
-                        )
+            LazyColumn(
+                modifier = Modifier.fillMaxWidth(),
+                verticalArrangement = Arrangement.spacedBy(8.dp),
+                contentPadding = PaddingValues(horizontal = 8.dp)
+            ) {
+                when (selectedTab) {
+                    TabType.EXPOSITORES -> {
+                        items(speakers) { speaker ->
+                            val talk = viewModel.getTalksBySpeaker(speaker.id)
+                            ExpositorCard(
+                                speaker = speaker,
+                                talk = talk,
+                                onClick = { talk?.let { onTalkSelected(it) } }
+                            )
+                        }
+                    }
+                    TabType.SPONSORS -> {
+                        items(sponsors) { sponsor ->
+                            SponsorCard(sponsor = sponsor)
+                        }
                     }
                 }
             }

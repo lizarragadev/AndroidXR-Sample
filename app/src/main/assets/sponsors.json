@@ -1,0 +1,30 @@
+[
+  {
+    "id": "sponsor_001",
+    "name": "Aspire Institute",
+    "startTime": "12:15",
+    "endTime": "12:30",
+    "description": "Patrocinador principal del evento.",
+    "website": null,
+    "logoUrl": null
+  },
+  {
+    "id": "sponsor_002",
+    "name": "Favorcito",
+    "startTime": "15:30",
+    "endTime": "15:40",
+    "description": "Patrocinador del evento.",
+    "website": null,
+    "logoUrl": null
+  },
+  {
+    "id": "sponsor_003",
+    "name": "Delve",
+    "startTime": "15:40",
+    "endTime": "15:55",
+    "description": "Patrocinador del evento.",
+    "website": null,
+    "logoUrl": null
+  }
+]
+

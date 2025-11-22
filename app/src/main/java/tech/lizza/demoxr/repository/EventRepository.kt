@@ -7,6 +7,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import tech.lizza.demoxr.data.Talk
 import tech.lizza.demoxr.data.Speaker
+import tech.lizza.demoxr.data.Sponsor
 import java.io.IOException
 
 class EventRepository(private val context: Context) {
@@ -26,6 +27,16 @@ class EventRepository(private val context: Context) {
         try {
             val jsonString = context.assets.open("talks.json").bufferedReader().use { it.readText() }
             val listType = object : TypeToken<List<Talk>>() {}.type
+            gson.fromJson(jsonString, listType)
+        } catch (e: IOException) {
+            emptyList()
+        }
+    }
+    
+    suspend fun getSponsors(): List<Sponsor> = withContext(Dispatchers.IO) {
+        try {
+            val jsonString = context.assets.open("sponsors.json").bufferedReader().use { it.readText() }
+            val listType = object : TypeToken<List<Sponsor>>() {}.type
             gson.fromJson(jsonString, listType)
         } catch (e: IOException) {
             emptyList()

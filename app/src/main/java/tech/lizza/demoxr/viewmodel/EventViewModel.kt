@@ -9,18 +9,24 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import tech.lizza.demoxr.data.Talk
 import tech.lizza.demoxr.data.Speaker
+import tech.lizza.demoxr.data.Sponsor
 import tech.lizza.demoxr.repository.EventRepository
+import tech.lizza.demoxr.ui.components.TabType
 
 class EventViewModel(application: Application) : AndroidViewModel(application) {
     private val repository = EventRepository(application)
     
     private val _speakers = MutableStateFlow<List<Speaker>>(emptyList())
+    val speakers: StateFlow<List<Speaker>> = _speakers.asStateFlow()
     
     private val _talks = MutableStateFlow<List<Talk>>(emptyList())
     val talks: StateFlow<List<Talk>> = _talks.asStateFlow()
     
-    private val _selectedDay = MutableStateFlow(1)
-    val selectedDay: StateFlow<Int> = _selectedDay.asStateFlow()
+    private val _sponsors = MutableStateFlow<List<Sponsor>>(emptyList())
+    val sponsors: StateFlow<List<Sponsor>> = _sponsors.asStateFlow()
+    
+    private val _selectedTab = MutableStateFlow(TabType.EXPOSITORES)
+    val selectedTab: StateFlow<TabType> = _selectedTab.asStateFlow()
     
     private val _isLoading = MutableStateFlow(false)
     val isLoading: StateFlow<Boolean> = _isLoading.asStateFlow()
@@ -52,6 +58,7 @@ class EventViewModel(application: Application) : AndroidViewModel(application) {
             try {
                 _speakers.value = repository.getSpeakers()
                 _talks.value = repository.getTalks()
+                _sponsors.value = repository.getSponsors()
             } catch (e: Exception) {
                 _error.value = "Error loading data: ${e.message}"
             } finally {
@@ -60,11 +67,11 @@ class EventViewModel(application: Application) : AndroidViewModel(application) {
         }
     }
     
-    fun selectDay(day: Int) {
-        _selectedDay.value = day
+    fun selectTab(tab: TabType) {
+        _selectedTab.value = tab
     }
     
-    fun getTalksByDay(day: Int): List<Talk> = _talks.value.filter { it.day == day }
+    fun getTalksBySpeaker(speakerId: String): Talk? = _talks.value.find { it.speakerId == speakerId }
     
     fun getSpeakerById(id: String): Speaker? = _speakers.value.find { it.id == id }
     

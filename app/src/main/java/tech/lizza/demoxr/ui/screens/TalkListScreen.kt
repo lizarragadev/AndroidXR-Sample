@@ -29,7 +29,10 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import tech.lizza.demoxr.data.Talk
 import tech.lizza.demoxr.ui.components.TalkCard
-import tech.lizza.demoxr.ui.components.DiaSelector
+import tech.lizza.demoxr.ui.components.TabSelector
+import tech.lizza.demoxr.ui.components.TabType
+import tech.lizza.demoxr.ui.components.ExpositorCard
+import tech.lizza.demoxr.ui.components.SponsorCard
 import tech.lizza.demoxr.viewmodel.EventViewModel
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -40,7 +43,9 @@ fun TalkListScreen(
     modifier: Modifier = Modifier
 ) {
     val talks by viewModel.talks.collectAsState()
-    val selectedDay by viewModel.selectedDay.collectAsState()
+    val speakers by viewModel.speakers.collectAsState()
+    val sponsors by viewModel.sponsors.collectAsState()
+    val selectedTab by viewModel.selectedTab.collectAsState()
     val isLoading by viewModel.isLoading.collectAsState()
     val error by viewModel.error.collectAsState()
 
@@ -59,7 +64,7 @@ fun TalkListScreen(
             TopAppBar(
                 title = {
                     Text(
-                        text = "DevFest 2025 Sureste de México",
+                        text = "DevFest El Alto 2025",
                         fontWeight = FontWeight.Bold
                     )
                 },
@@ -76,9 +81,9 @@ fun TalkListScreen(
                 .fillMaxSize()
                 .padding(paddingValues)
         ) {
-            DiaSelector(
-                diaSeleccionado = selectedDay,
-                onDiaSeleccionado = viewModel::selectDay,
+            TabSelector(
+                selectedTab = selectedTab,
+                onTabSelected = viewModel::selectTab,
                 modifier = Modifier.padding(bottom = 8.dp)
             )
 
@@ -90,32 +95,26 @@ fun TalkListScreen(
                     CircularProgressIndicator()
                 }
             } else {
-                val talksDelDia = viewModel.getTalksByDay(selectedDay)
-
-                if (talksDelDia.isEmpty()) {
-                    Box(
-                        modifier = Modifier.fillMaxSize(),
-                        contentAlignment = Alignment.Center
-                    ) {
-                        Text(
-                            text = "No hay charlas programadas para el Día $selectedDay",
-                            style = MaterialTheme.typography.titleMedium,
-                            color = MaterialTheme.colorScheme.onSurfaceVariant
-                        )
-                    }
-                } else {
-                    LazyColumn(
-                        modifier = Modifier.fillMaxWidth(),
-                        verticalArrangement = Arrangement.spacedBy(8.dp),
-                        contentPadding = PaddingValues(horizontal = 8.dp)
-                    ) {
-                        items(talksDelDia) { talk ->
-                            val speaker = viewModel.getSpeakerById(talk.speakerId)
-                            TalkCard(
-                                talk = talk,
-                                speakerName = speaker?.name ?: "Speaker not found",
-                                onClick = { onTalkClick(talk) }
-                            )
+                LazyColumn(
+                    modifier = Modifier.fillMaxWidth(),
+                    verticalArrangement = Arrangement.spacedBy(8.dp),
+                    contentPadding = PaddingValues(horizontal = 8.dp)
+                ) {
+                    when (selectedTab) {
+                        TabType.EXPOSITORES -> {
+                            items(speakers) { speaker ->
+                                val talk = viewModel.getTalksBySpeaker(speaker.id)
+                                ExpositorCard(
+                                    speaker = speaker,
+                                    talk = talk,
+                                    onClick = { talk?.let { onTalkClick(it) } }
+                                )
+                            }
+                        }
+                        TabType.SPONSORS -> {
+                            items(sponsors) { sponsor ->
+                                SponsorCard(sponsor = sponsor)
+                            }
                         }
                     }
                 }

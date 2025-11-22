@@ -1,257 +1,132 @@
 [
   {
     "id": "talk_001",
-    "title": "Architecture and Implementation of AI Agents with Google's ADK and Python",
-    "description": "Explora la arquitectura y implementación de agentes de IA utilizando Google's ADK y Python. Aprende a crear sistemas inteligentes que pueden tomar decisiones autónomas y ejecutar tareas complejas.",
+    "title": "Cómo liderar un proyecto en tecnología",
+    "description": "Aprende las técnicas y estrategias para liderar exitosamente proyectos tecnológicos.",
     "day": 1,
-    "startTime": "12:00",
-    "endTime": "13:00",
+    "startTime": "09:30",
+    "endTime": "10:00",
     "room": "Auditorio Principal",
-    "level": "ADVANCED",
-    "category": "Inteligencia Artificial",
+    "level": "INTERMEDIATE",
+    "category": "Liderazgo",
     "speakerId": "speaker_001",
-    "resources": [
-      "Código fuente de ejemplos",
-      "Documentación de Google ADK",
-      "Tutoriales de implementación"
-    ]
+    "resources": []
   },
   {
     "id": "talk_002",
-    "title": "De programador a fundador | Cómo llevar tu código a impactar en el mundo real",
-    "description": "Descubre cómo transformar tu pasión por programar en un negocio exitoso. Aprende las claves para crear productos tecnológicos que generen impacto real y sostenible en la sociedad.",
+    "title": "Predicción a través de Machine Learning",
+    "description": "Descubre cómo utilizar Machine Learning para realizar predicciones precisas en diversos contextos.",
     "day": 1,
-    "startTime": "13:00",
-    "endTime": "14:00",
+    "startTime": "10:00",
+    "endTime": "10:30",
     "room": "Auditorio Principal",
     "level": "INTERMEDIATE",
-    "category": "Emprendimiento",
+    "category": "Machine Learning",
     "speakerId": "speaker_002",
-    "resources": [
-      "Guía de emprendimiento tech",
-      "Casos de estudio exitosos",
-      "Herramientas de validación"
-    ]
+    "resources": []
   },
   {
     "id": "talk_003",
-    "title": "Mobile AI Experiences: Building Intelligent Android Apps",
-    "description": "Aprende a integrar IA en aplicaciones móviles Android. Descubre cómo crear experiencias inteligentes que se adapten al usuario y mejoren la usabilidad de tus apps.",
+    "title": "Crea Experiencias Inmersivas con Android XR",
+    "description": "Sumérgete en el mundo de la realidad extendida con Android XR y aprende a crear experiencias inmersivas.",
     "day": 1,
-    "startTime": "14:00",
-    "endTime": "15:00",
+    "startTime": "10:30",
+    "endTime": "11:00",
     "room": "Auditorio Principal",
     "level": "INTERMEDIATE",
-    "category": "Mobile AI",
+    "category": "XR Development",
     "speakerId": "speaker_003",
-    "resources": [
-      "Ejemplos de código Android",
-      "APIs de IA móvil",
-      "Patrones de diseño"
-    ]
+    "resources": []
   },
   {
     "id": "talk_004",
-    "title": "De programador a fundador | Cómo llevar tu código a impactar en el mundo real",
-    "description": "Descubre cómo transformar tu pasión por programar en un negocio exitoso. Aprende las claves para crear productos tecnológicos que generen impacto real y sostenible en la sociedad.",
+    "title": "Entrena y capacita a tu modelo de IA",
+    "description": "Aprende técnicas avanzadas para entrenar y capacitar modelos de inteligencia artificial.",
     "day": 1,
-    "startTime": "15:00",
-    "endTime": "16:00",
+    "startTime": "11:00",
+    "endTime": "11:30",
     "room": "Auditorio Principal",
-    "level": "INTERMEDIATE",
-    "category": "Emprendimiento",
+    "level": "ADVANCED",
+    "category": "Inteligencia Artificial",
     "speakerId": "speaker_004",
-    "resources": [
-      "Guía de emprendimiento tech",
-      "Casos de estudio exitosos",
-      "Herramientas de validación"
-    ]
+    "resources": []
   },
   {
     "id": "talk_005",
-    "title": "Visualizing Hurricane Trajectories with Modern Data Tools",
-    "description": "Aprende a visualizar trayectorias de huracanes usando herramientas modernas de datos. Descubre técnicas de mapeo geoespacial y sistemas de alerta temprana para fenómenos meteorológicos.",
+    "title": "Web & AI: Creating Apps with Angular, Gemini & MCPs",
+    "description": "Descubre cómo crear aplicaciones web inteligentes combinando Angular, Gemini AI y Model Context Protocols.",
     "day": 1,
-    "startTime": "16:00",
-    "endTime": "17:00",
+    "startTime": "11:30",
+    "endTime": "12:15",
     "room": "Auditorio Principal",
     "level": "ADVANCED",
-    "category": "Data Visualization",
+    "category": "Web Development",
     "speakerId": "speaker_005",
-    "resources": [
-      "Herramientas de mapeo",
-      "Datos meteorológicos",
-      "Técnicas de visualización"
-    ]
+    "resources": []
   },
   {
     "id": "talk_006",
-    "title": "Beyond Vibe Coding with Firebase Studio",
-    "description": "Descubre las capacidades avanzadas de Firebase Studio para ir más allá del desarrollo básico. Aprende patrones avanzados, optimizaciones y mejores prácticas para aplicaciones escalables.",
-    "day": 2,
-    "startTime": "11:00",
-    "endTime": "12:00",
-    "room": "Virtual",
-    "level": "INTERMEDIATE",
-    "category": "Firebase",
+    "title": "Automatizando la Confianza: QA y Ciberseguridad en entornos DevSecOps",
+    "description": "Aprende a automatizar procesos de QA y ciberseguridad en entornos DevSecOps para garantizar la confiabilidad del software.",
+    "day": 1,
+    "startTime": "13:30",
+    "endTime": "14:00",
+    "room": "Auditorio Principal",
+    "level": "ADVANCED",
+    "category": "DevSecOps",
     "speakerId": "speaker_006",
-    "resources": [
-      "Firebase Studio templates",
-      "Patrones avanzados",
-      "Guía de optimización"
-    ]
+    "resources": []
   },
   {
     "id": "talk_007",
-    "title": "Recetas Mágicas para Android Studio con Gemini",
-    "description": "Descubre cómo usar Gemini como copiloto en Android Studio para acelerar tu desarrollo. Aprende técnicas avanzadas de integración y optimización de flujos de trabajo.",
-    "day": 2,
-    "startTime": "12:00",
-    "endTime": "13:00",
-    "room": "Virtual",
+    "title": "La UI que habla: Cuando tu interfaz se convierte en tu marca",
+    "description": "Descubre cómo el diseño de interfaces puede convertirse en un elemento diferenciador de tu marca.",
+    "day": 1,
+    "startTime": "14:00",
+    "endTime": "14:30",
+    "room": "Auditorio Principal",
     "level": "INTERMEDIATE",
-    "category": "Android Development",
+    "category": "UI/UX Design",
     "speakerId": "speaker_007",
-    "resources": [
-      "Configuración de Gemini",
-      "Snippets de código",
-      "Automatización de tareas"
-    ]
+    "resources": []
   },
   {
     "id": "talk_008",
-    "title": "Web Workers: Architectural Patterns for High-Performance Apps",
-    "description": "Explora patrones arquitectónicos avanzados usando Web Workers para crear aplicaciones web de alto rendimiento. Aprende a optimizar el rendimiento y la experiencia del usuario.",
-    "day": 2,
-    "startTime": "13:00",
-    "endTime": "14:00",
-    "room": "Virtual",
-    "level": "ADVANCED",
-    "category": "Web Performance",
+    "title": "No rompas el repo: Flujos y buenas prácticas en Git",
+    "description": "Aprende flujos de trabajo y buenas prácticas con Git para mantener tu repositorio organizado y funcional.",
+    "day": 1,
+    "startTime": "14:30",
+    "endTime": "15:00",
+    "room": "Auditorio Principal",
+    "level": "BEGINNER",
+    "category": "Version Control",
     "speakerId": "speaker_008",
-    "resources": [
-      "Patrones de Web Workers",
-      "Optimización de rendimiento",
-      "Casos de uso reales"
-    ]
+    "resources": []
   },
   {
     "id": "talk_009",
-    "title": "Crea Experiencias Inmersivas con Android XR",
-    "description": "Sumérgete en el mundo de la realidad extendida con Android XR. Aprende a crear experiencias inmersivas que combinen el mundo real con elementos virtuales de manera fluida.",
-    "day": 2,
-    "startTime": "14:00",
-    "endTime": "15:00",
-    "room": "Virtual",
-    "level": "INTERMEDIATE",
-    "category": "XR Development",
+    "title": "El Bug que ningún LLM puede arreglar: Tus Soft Skills. Técnicas para mejorar tu carrera profesional",
+    "description": "Descubre las habilidades blandas esenciales para el éxito profesional que van más allá del código.",
+    "day": 1,
+    "startTime": "15:00",
+    "endTime": "15:30",
+    "room": "Auditorio Principal",
+    "level": "BEGINNER",
+    "category": "Career Development",
     "speakerId": "speaker_009",
-    "resources": [
-      "Android XR SDK",
-      "Ejemplos de proyectos",
-      "Guía de implementación"
-    ]
+    "resources": []
   },
   {
     "id": "talk_010",
-    "title": "Construyendo Micro Frontends con Native Federation",
-    "description": "Aprende a construir arquitecturas de micro frontends usando Native Federation. Descubre cómo modularizar aplicaciones frontend para mejorar la escalabilidad y el mantenimiento.",
-    "day": 2,
-    "startTime": "15:00",
-    "endTime": "16:00",
-    "room": "Virtual",
+    "title": "No solo conectes tu IoT: ¡Escálalo! Con Google Pub/Sub y Cloud Functions",
+    "description": "Aprende a escalar soluciones IoT utilizando Google Pub/Sub y Cloud Functions para manejar grandes volúmenes de datos.",
+    "day": 1,
+    "startTime": "16:00",
+    "endTime": "16:30",
+    "room": "Auditorio Principal",
     "level": "ADVANCED",
-    "category": "Frontend Architecture",
+    "category": "IoT & Cloud",
     "speakerId": "speaker_010",
-    "resources": [
-      "Native Federation setup",
-      "Patrones de micro frontends",
-      "Ejemplos de implementación"
-    ]
-  },
-  {
-    "id": "talk_011",
-    "title": "Building AI Agents with self-managing memory",
-    "description": "Descubre cómo crear agentes de IA con sistemas de memoria autogestionados. Aprende técnicas avanzadas para que los agentes puedan recordar, aprender y adaptarse continuamente sin intervención humana.",
-    "day": 3,
-    "startTime": "11:00",
-    "endTime": "12:00",
-    "room": "Virtual",
-    "level": "ADVANCED",
-    "category": "AI Memory Systems",
-    "speakerId": "speaker_011",
-    "resources": [
-      "Arquitecturas de memoria IA",
-      "Algoritmos de gestión autónoma",
-      "Casos de uso reales"
-    ]
-  },
-  {
-    "id": "talk_012",
-    "title": "Cómo usar Gemini como copiloto en decisiones basadas en datos",
-    "description": "Aprende a integrar Gemini como copiloto inteligente para análisis de datos y toma de decisiones. Descubre cómo la IA puede acelerar el proceso de insights y recomendaciones basadas en datos.",
-    "day": 3,
-    "startTime": "12:00",
-    "endTime": "13:00",
-    "room": "Virtual",
-    "level": "INTERMEDIATE",
-    "category": "Data Intelligence",
-    "speakerId": "speaker_012",
-    "resources": [
-      "Integración con Gemini API",
-      "Patrones de análisis de datos",
-      "Ejemplos de business intelligence"
-    ]
-  },
-  {
-    "id": "talk_013",
-    "title": "Armor Up: Asegurando tus aplicaciones de GenAI con Model Armor",
-    "description": "Protege tus aplicaciones de IA generativa con técnicas avanzadas de seguridad. Aprende sobre Model Armor y estrategias de hardening para prevenir ataques y vulnerabilidades en sistemas de IA.",
-    "day": 3,
-    "startTime": "13:00",
-    "endTime": "14:00",
-    "room": "Virtual",
-    "level": "ADVANCED",
-    "category": "AI Security",
-    "speakerId": "speaker_013",
-    "resources": [
-      "Model Armor framework",
-      "Técnicas de hardening",
-      "Checklist de seguridad IA"
-    ]
-  },
-  {
-    "id": "talk_014",
-    "title": "Reactividad con Angular Signals",
-    "description": "Explora el nuevo sistema de reactividad de Angular con Signals. Aprende a crear aplicaciones más eficientes y reactivas usando los patrones modernos de Angular para manejo de estado y actualizaciones.",
-    "day": 3,
-    "startTime": "14:00",
-    "endTime": "15:00",
-    "room": "Virtual",
-    "level": "INTERMEDIATE",
-    "category": "Angular",
-    "speakerId": "speaker_014",
-    "resources": [
-      "Angular Signals API",
-      "Patrones de reactividad",
-      "Ejemplos de implementación"
-    ]
-  },
-  {
-    "id": "talk_015",
-    "title": "Aprende a desarrollar en 10x y Firebase Studio",
-    "description": "Descubre técnicas y herramientas para aumentar tu productividad de desarrollo 10 veces. Aprende a usar Firebase Studio y metodologías avanzadas para acelerar el ciclo de desarrollo.",
-    "day": 3,
-    "startTime": "15:00",
-    "endTime": "16:00",
-    "room": "Virtual",
-    "level": "BEGINNER",
-    "category": "Development Productivity",
-    "speakerId": "speaker_015",
-    "resources": [
-      "Firebase Studio avanzado",
-      "Metodologías 10x",
-      "Herramientas de productividad"
-    ]
+    "resources": []
   }
 ]
