@@ -1,24 +1,33 @@
 [
   {
     "id": "speaker_001",
-    "name": "Fernando Vidal",
-    "title": "Tech Lead",
+    "name": "Jhonny Ventiades",
+    "title": "Mobile Developer",
     "company": "",
-    "biography": "Experto en liderazgo de proyectos tecnológicos.",
+    "biography": "Experto en automatización y deployment de aplicaciones móviles.",
     "imageUrl": "@drawable/ic_person",
     "socialMedia": {}
   },
   {
     "id": "speaker_002",
-    "name": "Efrain Salina Sanchez",
-    "title": "ML Engineer",
+    "name": "Yury Camacho",
+    "title": "Android SDK Engineer",
     "company": "",
-    "biography": "Especialista en Machine Learning y predicción de datos.",
+    "biography": "Especialista en ingeniería de SDKs y creación de librerías robustas para Android.",
     "imageUrl": "@drawable/ic_person",
     "socialMedia": {}
   },
   {
     "id": "speaker_003",
+    "name": "Irvin Cossio",
+    "title": "React Native Developer",
+    "company": "",
+    "biography": "Experto en desarrollo multiplataforma con React Native.",
+    "imageUrl": "@drawable/ic_person",
+    "socialMedia": {}
+  },
+  {
+    "id": "speaker_004",
     "name": "Gustavo Lizárraga",
     "title": "XR Development Lead",
     "company": "",
@@ -27,65 +36,56 @@
     "socialMedia": {}
   },
   {
-    "id": "speaker_004",
-    "name": "Christian Vega Mamani",
-    "title": "AI Engineer",
-    "company": "",
-    "biography": "Especialista en entrenamiento y capacitación de modelos de IA.",
-    "imageUrl": "@drawable/ic_person",
-    "socialMedia": {}
-  },
-  {
     "id": "speaker_005",
-    "name": "Kevin Dávila",
-    "title": "Full Stack Developer",
+    "name": "Kenji Kawaida",
+    "title": "Firebase & AI Engineer",
     "company": "",
-    "biography": "Desarrollador especializado en Web & AI con Angular, Gemini y MCPs.",
+    "biography": "Especialista en integración de IA generativa con Firebase en aplicaciones móviles.",
     "imageUrl": "@drawable/ic_person",
     "socialMedia": {}
   },
   {
     "id": "speaker_006",
-    "name": "Luis Jhordy Mamani Arias",
-    "title": "DevSecOps Engineer",
+    "name": "Carlos Collazos",
+    "title": "Design Systems Engineer",
     "company": "",
-    "biography": "Experto en QA y Ciberseguridad en entornos DevSecOps.",
+    "biography": "Experto en sistemas de diseño y handoff entre diseño y desarrollo.",
     "imageUrl": "@drawable/ic_person",
     "socialMedia": {}
   },
   {
     "id": "speaker_007",
-    "name": "Jose Abraham Bautista Coaquira",
-    "title": "UI/UX Designer",
+    "name": "Armando Picón",
+    "title": "AI Engineer",
     "company": "",
-    "biography": "Especialista en diseño de interfaces y branding digital.",
+    "biography": "Especialista en IA on-device y Gemini Nano.",
     "imageUrl": "@drawable/ic_person",
     "socialMedia": {}
   },
   {
     "id": "speaker_008",
-    "name": "Neil Graneros Flores",
-    "title": "Software Engineer",
+    "name": "Jesus Machicado",
+    "title": "Flutter & AI Developer",
     "company": "",
-    "biography": "Experto en control de versiones y buenas prácticas con Git.",
+    "biography": "Experto en Flutter, IA y Google IDX para desarrollo multiplataforma.",
     "imageUrl": "@drawable/ic_person",
     "socialMedia": {}
   },
   {
     "id": "speaker_009",
-    "name": "Cristian Fernando Villca Gutierrez",
-    "title": "Career Coach",
+    "name": "Valentina Salinas",
+    "title": "UX Designer",
     "company": "",
-    "biography": "Especialista en desarrollo profesional y soft skills.",
+    "biography": "Especialista en diseño de experiencia de usuario para aplicaciones móviles.",
     "imageUrl": "@drawable/ic_person",
     "socialMedia": {}
   },
   {
     "id": "speaker_010",
-    "name": "Hugo Alfredo Condori Yujra",
-    "title": "Cloud Architect",
+    "name": "Sebastian Gonzales",
+    "title": "Flutter Developer",
     "company": "",
-    "biography": "Arquitecto especializado en IoT y soluciones cloud escalables.",
+    "biography": "Experto en Flutter y sistemas de diseño atómicos.",
     "imageUrl": "@drawable/ic_person",
     "socialMedia": {}
   }

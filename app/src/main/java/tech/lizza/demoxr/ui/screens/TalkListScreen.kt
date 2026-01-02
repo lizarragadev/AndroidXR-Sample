@@ -64,7 +64,7 @@ fun TalkListScreen(
             TopAppBar(
                 title = {
                     Text(
-                        text = "DevFest El Alto 2025",
+                        text = "mDevConf 2025",
                         fontWeight = FontWeight.Bold
                     )
                 },

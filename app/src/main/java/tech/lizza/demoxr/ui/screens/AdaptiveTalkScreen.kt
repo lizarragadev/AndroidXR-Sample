@@ -106,7 +106,7 @@ fun AdaptiveTalkScreen(
                 TopAppBar(
                     title = {
                         Text(
-                            text = "DevFest El Alto 2025",
+                            text = "mDevConf 2025",
                             fontWeight = FontWeight.Bold
                         )
                     },
@@ -211,7 +211,7 @@ fun AdaptiveTalkScreen(
                     ) {
                         // Título
                         Text(
-                            text = "📍 Ubicación del Evento Presencial",
+                            text = "ℹ️ Información del Evento",
                             style = MaterialTheme.typography.headlineSmall,
                             fontWeight = FontWeight.Bold,
                             modifier = Modifier.padding(bottom = 16.dp)
@@ -219,78 +219,26 @@ fun AdaptiveTalkScreen(
                         
                         // Contenido
                         Text(
-                            text = "DevFest El Alto 2025",
+                            text = "mDevConf 2025",
                             style = MaterialTheme.typography.titleMedium,
                             fontWeight = FontWeight.Bold,
                             modifier = Modifier.padding(bottom = 8.dp)
                         )
                         Text(
-                            text = "🏢 Infocal El Alto",
+                            text = "📅 Fecha: Sábado 6 de Diciembre, 2025",
                             style = MaterialTheme.typography.bodyLarge,
                             modifier = Modifier.padding(bottom = 4.dp)
                         )
                         Text(
-                            text = "📍 Av. 6 de Marzo entre Calle 2 y 3",
-                            style = MaterialTheme.typography.bodyMedium,
+                            text = "🌐 Modalidad: Online",
+                            style = MaterialTheme.typography.bodyLarge,
                             modifier = Modifier.padding(bottom = 4.dp)
                         )
                         Text(
-                            text = "🏙️ El Alto, Bolivia",
+                            text = "🏢 Organizado por: mDevConf",
                             style = MaterialTheme.typography.bodyMedium,
                             modifier = Modifier.padding(bottom = 8.dp)
                         )
-                        Text(
-                            text = "⏰ Horario: 1:00 PM - 9:00 PM",
-                            style = MaterialTheme.typography.bodyMedium,
-                            modifier = Modifier.padding(bottom = 4.dp)
-                        )
-                        Text(
-                            text = "📅 Fecha: Sábado 22 de Noviembre, 2025",
-                            style = MaterialTheme.typography.bodyMedium,
-                            modifier = Modifier.padding(bottom = 16.dp)
-                        )
-                        
-                        // Mapa embebido
-                        Card(
-                            modifier = Modifier.fillMaxWidth(),
-                            elevation = CardDefaults.cardElevation(defaultElevation = 4.dp),
-                            colors = CardDefaults.cardColors(
-                                containerColor = MaterialTheme.colorScheme.primaryContainer
-                            )
-                        ) {
-                            Column(
-                                modifier = Modifier.padding(16.dp)
-                            ) {
-                                Text(
-                                    text = "🗺️ Ubicación en Google Maps",
-                                    style = MaterialTheme.typography.titleSmall,
-                                    fontWeight = FontWeight.Bold,
-                                    modifier = Modifier.padding(bottom = 8.dp)
-                                )
-                                Text(
-                                    text = "Haz clic en el enlace para ver la ubicación exacta:",
-                                    style = MaterialTheme.typography.bodySmall,
-                                    modifier = Modifier.padding(bottom = 8.dp)
-                                )
-                                Text(
-                                    text = "https://www.google.com/maps?ll=-16.507074,-68.16402&z=15&t=m&hl=es-419&gl=US&mapclient=embed&cid=2176606719245611935",
-                                    style = MaterialTheme.typography.bodySmall,
-                                    color = MaterialTheme.colorScheme.primary,
-                                    textDecoration = TextDecoration.Underline,
-                                    modifier = Modifier
-                                        .padding(bottom = 8.dp)
-                                        .clickable {
-                                            val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.google.com/maps?ll=-16.507074,-68.16402&z=15&t=m&hl=es-419&gl=US&mapclient=embed&cid=2176606719245611935"))
-                                            context.startActivity(intent)
-                                        }
-                                )
-                                Text(
-                                    text = "📍 Coordenadas: -16.507074, -68.16402",
-                                    style = MaterialTheme.typography.bodySmall,
-                                    color = MaterialTheme.colorScheme.onSurfaceVariant
-                                )
-                            }
-                        }
                         
                         Spacer(modifier = Modifier.height(16.dp))
                         
@@ -345,35 +293,41 @@ fun AdaptiveTalkScreen(
                         
                         // Contenido
                         Text(
-                            text = "DevFest El Alto 2025",
+                            text = "mDevConf 2025",
                             style = MaterialTheme.typography.titleMedium,
                             fontWeight = FontWeight.Bold,
                             modifier = Modifier.padding(bottom = 8.dp)
                         )
                         Text(
-                            text = "📅 Fecha: Sábado 22 de Noviembre, 2025",
+                            text = "📅 Fecha: Sábado 6 de Diciembre, 2025",
                             style = MaterialTheme.typography.bodyLarge,
                             modifier = Modifier.padding(bottom = 4.dp)
                         )
                         Text(
-                            text = "⏰ Horario: 1:00 PM - 9:00 PM",
+                            text = "🌐 Modalidad: Online",
+                            style = MaterialTheme.typography.bodyLarge,
+                            modifier = Modifier.padding(bottom = 4.dp)
+                        )
+                        Text(
+                            text = "🏢 Organizado por: mDevConf",
                             style = MaterialTheme.typography.bodyMedium,
                             modifier = Modifier.padding(bottom = 8.dp)
                         )
                         Text(
-                            text = "🎟️ Inscripción Libre",
+                            text = "🔗 YouTube Live Stream",
                             style = MaterialTheme.typography.bodyMedium,
-                            modifier = Modifier.padding(bottom = 8.dp)
+                            fontWeight = FontWeight.Bold,
+                            modifier = Modifier.padding(bottom = 4.dp)
                         )
                         Text(
-                            text = "🔗 https://gdg.community.dev/events/details/google-gdg-el-alto-presents-devfest-el-alto-2025/",
+                            text = "https://www.youtube.com/watch?v=kEf7pvGdKC0",
                             style = MaterialTheme.typography.bodySmall,
                             color = MaterialTheme.colorScheme.primary,
                             textDecoration = TextDecoration.Underline,
                             modifier = Modifier
                                 .padding(bottom = 16.dp)
                                 .clickable {
-                                    val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://gdg.community.dev/events/details/google-gdg-el-alto-presents-devfest-el-alto-2025/"))
+                                    val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.youtube.com/watch?v=kEf7pvGdKC0"))
                                     context.startActivity(intent)
                                 }
                         )
